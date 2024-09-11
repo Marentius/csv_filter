@@ -3,8 +3,8 @@ import pandas as pd
 # Yo peeps. Dette skriptet leser inn en csv-fil og filtrerer ut de kolonnene vi vil bruke.
 
 # For å bruke scriptet må dere huske å endre input_file_path tilpasset deres lokale filsti. 
-input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\raw\\psam_p11.csv'
-output_file_path = 'psam_p11.csv'  # Dette er output-fila 
+input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\raw\\psam_dc.csv'
+output_file_path = 'dcID.csv'  # Dette er output-fila 
 
 # Her kan dere definere hvilke kolonner dere vil beholde 
 columns_to_keep = ['SCHL', 'SCHG', 'POVPIP', 'WKL', 'FOD1P']
