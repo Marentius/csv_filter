@@ -15,6 +15,9 @@ df = pd.read_csv(input_file_path)
 # Filtrerer kolonnene og fyller NA-verdier med 0 før konvertering til int
 filtered_df = df[columns_to_keep].fillna(0).astype(int)
 
+# Legger til en unik ID for hver rad
+filtered_df.insert(0, 'ID', range(1, len(filtered_df) + 1))
+
 filtered_df.to_csv(output_file_path, index=False)
 
 print(f"Filtered data saved to {output_file_path}")
