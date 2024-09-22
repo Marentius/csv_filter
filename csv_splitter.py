@@ -2,7 +2,7 @@ import pandas as pd
 import math
 
 # input fil
-input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\raw\\psam_ca2_converted.csv'
+input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\raw\\psam_ca2.csv'
 output_file_base = 'psam_ca2_part_'  # output fil
 
 # leser csv fil

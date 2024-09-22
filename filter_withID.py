@@ -7,7 +7,7 @@ input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\raw\\
 output_file_path = 'psam_ca.csv'  # Dette er output-fila 
 
 # Her kan dere definere hvilke kolonner dere vil beholde 
-columns_to_keep = ['SCHL', 'SCHG', 'POVPIP', 'WKL', 'FOD1P', 'FOD2P']
+columns_to_keep = ['SCHL', 'SCHG', 'POVPIP', 'WKL', 'FOD1P', 'FOD2P', 'AGEP', 'SEX', 'WAGP', 'PERNP']
 
 # Ikke rør noe under her
 df = pd.read_csv(input_file_path)
