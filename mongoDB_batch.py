@@ -15,7 +15,7 @@ def insert_batch(data_batch):
         print(f"Error inserting batch: {e}")
 
 
-with open('C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\noder\\psam_ca2_converted.csv', 'r') as file:
+with open('C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\konverterDatasett\\psam_ca2.csv', 'r') as file:
     csv_reader = csv.DictReader(file)
     batch = []
     batch_size = 10000 
@@ -23,15 +23,15 @@ with open('C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\noder\\psam_c
     for row in csv_reader:
         
         person_data = {
-            "person_id": int(row["ID"]),
-            "sex": row["sex_id"],
-            "age": (row["age"]),
-            "when_last_worked": row["when_last_worked_id"],
+            "ID": int(row["ID"]),
+            "sex": row["sex"],
+            "age": int(row["age"]),
+            "when_last_worked": row["when_last_worked"],
             "education": {
-                "education_level": row["education_level_id"],
-                "field_of_degree1": row["field_of_degree1_id"],
-                "field_of_degree2": row["field_of_degree2_id"],
-                "current_education": row["current_education_id"]
+                "education_level": row["education_level"],
+                "field_of_degree1": row["field_of_degree1"],
+                "field_of_degree2": row["field_of_degree2"],
+                "current_education": row["current_education"]
             },
             "economy": {
                 "poverty_income_ratio": int(row["poverty_income_ratio"]),

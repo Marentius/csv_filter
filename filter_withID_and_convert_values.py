@@ -1,3 +1,4 @@
+import csv
 import pandas as pd
 
 # Input fil
@@ -17,11 +18,11 @@ education_level = {
     3: 'Kindergarten',
     23: 'Professional degree beyond a bachelor\'s degree',
     10: 'Grade 7',
-    19: '1 or more years of college credit, no degree',
+    19: '1 or more years of college credit no degree',
     22: 'Master\'s degree',
     20: 'Associate\'s degree',
     0: 'N/A (less than 3 years old)',
-    2: 'Nursery school, preschool',
+    2: 'Nursery school preschool',
     21: 'Bachelor\'s degree',
     8: 'Grade 5',
     24: 'Doctorate degree',
@@ -32,9 +33,9 @@ education_level = {
     13: 'Grade 10',
     9: 'Grade 6',
     5: 'Grade 2',
-    15: '12th grade - no diploma',
+    15: '12th grade no diploma',
     11: 'Grade 8',
-    18: 'Some college, but less than 1 year'
+    18: 'Some college but less than 1 year'
 }
 
 current_education = {
@@ -85,7 +86,7 @@ field_of_degree1 = {
     6102: 'Communication Disorders Sciences And Services',
     5005: 'Geosciences',
     2301: 'Educational Administration And Supervision',
-    5701: 'Electrical, Mechanical, And Precision Technologies And Production',
+    5701: 'Electrical Mechanical And Precision Technologies And Production',
     6099: 'Miscellaneous Fine Arts',
     5201: 'Educational Psychology',
     6007: 'Studio Arts',
@@ -145,7 +146,7 @@ field_of_degree1 = {
     2311: 'Social Science Or History Teacher Education',
     3801: 'Military Technologies',
     2603: 'Other Foreign Languages',
-    5102: 'Nuclear, Industrial Radiology, And Biological Technologies',
+    5102: 'Nuclear Industrial Radiology And Biological Technologies',
     2503: 'Industrial Production Technologies',
     2105: 'Information Sciences',
     2500: 'Engineering Technologies',
@@ -291,7 +292,7 @@ field_of_degree2 = {
     6107: 'Nursing',
     6003: 'Visual And Performing Arts',
     2314: 'Art And Music Education',
-    5701: 'Electrical, Mechanical, And Precision Technologies And Production',
+    5701: 'Electrical Mechanical And Precision Technologies And Production',
     6099: 'Miscellaneous Fine Arts',
     2201: 'Cosmetology Services And Culinary Arts',
     5299: 'Miscellaneous Psychology',
@@ -395,7 +396,7 @@ field_of_degree2 = {
     4002: 'Nutrition Sciences',
     5203: 'Counseling Psychology',
     3702: 'Statistics And Decision Science',
-    5102: 'Nuclear, Industrial Radiology, And Biological Technologies',
+    5102: 'Nuclear Industrial Radiology And Biological Technologies',
     2502: 'Electrical Engineering Technology',
     2501: 'Engineering And Industrial Management',
     4007: 'Interdisciplinary Social Sciences',
@@ -450,6 +451,6 @@ filtered_df = map_values(filtered_df, 'when_last_worked_id', when_last_worked)
 filtered_df.insert(0, 'ID', range(1, len(filtered_df) + 1))
 
 # Lagrer den modifiserte filen
-filtered_df.to_csv(output_file_path, index=False)
+filtered_df.to_csv(output_file_path, index=False, quoting=csv.QUOTE_MINIMAL)
 
 print(f"Filtrert og konvertert data er lagret til {output_file_path}")
