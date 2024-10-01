@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Input fil
-input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\raw\\psam_ca2.csv'
+input_file_path = 'C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\noder\\psam_ca2.csv'
 output_file_path = 'psam_ca2_converted.csv'  # Output fil
 
 # Kolonner som skal beholdes
