@@ -23,9 +23,9 @@ with open('C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\noder\\psam_c
     for row in csv_reader:
         
         person_data = {
-            "person_id": row["ID"],
+            "person_id": int(row["ID"]),
             "sex": row["sex_id"],
-            "age": row["age"],
+            "age": (row["age"]),
             "when_last_worked": row["when_last_worked_id"],
             "education": {
                 "education_level": row["education_level_id"],
@@ -34,9 +34,9 @@ with open('C:\\Users\\vetle\\OneDrive\\Dokumenter\\Skole\\BigData\\noder\\psam_c
                 "current_education": row["current_education_id"]
             },
             "economy": {
-                "poverty_income_ratio": row["poverty_income_ratio"],
-                "salary_past_12_months": row["sallary_past_12_months"],
-                "total_persons_earnings": row["total_persons_earnings"]
+                "poverty_income_ratio": int(row["poverty_income_ratio"]),
+                "salary_past_12_months": int(row["sallary_past_12_months"]),
+                "total_persons_earnings": int(row["total_persons_earnings"])
             }
         }
 
